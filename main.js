@@ -1,7 +1,11 @@
 const jokeContainer = document.getElementById("joke");
 const btn = document.getElementById("btn");
+const emoji = document.getElementById('emoji');
+
 const 영어농담_URL = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
 const 영어번역_URL = "https://translate-plus.p.rapidapi.com/translate";
+
+
 let jokeBox = document.getElementById("joke");
 
 // jokeApi에서 농담 가져오기
@@ -48,9 +52,11 @@ btn.addEventListener("click", () => {
   영어농담_가져오기();
   btn.disabled = true;
   btn.style.backgroundColor = "red";
+  emoji.innerHTML = "&#128539";
 
   setTimeout(() => {
     btn.disabled = false;
     btn.style.backgroundColor = "#fab22e";
+    emoji.innerHTML = "&#128514";
   }, 5000);
 });
