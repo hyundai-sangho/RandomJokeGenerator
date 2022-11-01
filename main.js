@@ -16,7 +16,7 @@ let 영어농담_가져오기 = async () => {
     })
     .catch((err) => {
       console.error(err);
-      alert(err);
+      alert("api의 문제니 5초 뒤에 다시 버튼을 클릭하세요.");
     });
 };
 
@@ -40,7 +40,7 @@ let 영어_한글로_번역 = async (영어농담) => {
     })
     .catch((err) => {
       console.error(err);
-      alert(err);
+      alert("api의 문제니 5초 뒤에 다시 버튼을 클릭하세요.");
     });
 };
 
